@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--------------- question-1--------------->
+    <!-- Write a JavaScript function to find the sum of all the elements in an array.--->
+    <script>
+        var array1 = [1, 2, 3, 4];
+        let sum1 = 0;
+        function myfun(a) {
+            for (let i = 0; i < array1.length; i++) {
+                sum1 += array1[i];
+            }
+            console.log(sum1);
+        }
+        myfun();
+    </script>
+    <!---------------question-2------------->
+    <!-- Write a function to reverse a string. -->
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.reverse();
+        console.log(fruits);
+    </script>
+
+    <!--------------question-3-------------->
+    <!-- Write a function that checks if a number is even. -->
+    <script>
+        const e = [27];
+        function evennumber() {
+            if (e == 0 || !!e && !(e % 2))
+                console.log('even')
+            else (
+                console.log('odd')
+            )
+        }
+        evennumber()
+    </script>
+    <!---------------question-4--------------->
+    <!-- Write a function that finds the maximum element in an array. -->
+    <script>
+        x = findMax(1, 123, 500, 115, 44, 88);
+        function findMax() {
+            let max = -Infinity;
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        console.log(x)
+    </script>
+    <!-----------------question-5---------------->
+    <!---Write a function to calculate the factorial of a number.--->
+    <script>
+        let number = 5;
+        function factorial(number) {
+            let ans = 1;
+            if (number === 0)
+                return 1;
+            for (let i = 2; i <= number; i++)
+                ans = ans * i;
+            return ans;
+        }
+        console.log(factorial(number));
+    </script>
+    <!---------------question-6------------>
+    <!-- Write a function to check if a given string is a palindrome -->
+    <script>
+            function checkPalindrome(str) {
+                // applying split, revere and join
+                const reversedString = str.split('').reverse().join('');
+                if (str === reversedString)
+                    return true;
+                else
+                    return false;
+            }
+            result = checkPalindrome("abcd dbca")
+            if (result == true) {
+                console.log("The given string is Palindrome");
+            }
+            else {
+                console.log("The given string is NOT Palindrome");
+            }
+    </script>
+    <!---------------question-7------------>
+    <!-- // Write a function to remove duplicates from an array.--->
+
+    <script>
+        let arr = ["apple", "mango", "apple",
+            "orange", "mango", "mango"];
+
+        function removeDuplicates(arr) {
+            return arr.filter((item,
+                index) => arr.indexOf(item) === index);
+        }
+        console.log(removeDuplicates(arr));
+    </script>
+    <!-------------question-8------------->
+    <!-- Write a function that finds the second smallest number in an array. -->
+    <script>
+        //---------max-------------->
+        let a = [2, 10, 12, 18, 30, 32];
+        function maxnumber() {
+            let max = -Infinity;
+            let secondmax = -Infinity;
+            for (i = 0; i < a.length; i++) {
+                max = Math.max(max, a[i])
+            }
+            console.log(max);
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] < max) {
+                    secondmax = Math.max(secondmax, a[i])
+                }
+            }
+            console.log(secondmax)
+        }
+        maxnumber()
+
+        //---------------min--------------->
+
+        let b = [2, 10, 12, 18, 30, 32];
+        function minnumber() {
+            let min = Infinity;
+            let secondmin = Infinity;
+            for (i = 0; i < b.length; i++) {
+                min = Math.min(min, b[i])
+            }
+            console.log(min);
+            for (let i = 0; i < b.length; i++) {
+                if (b[i] > min) {
+                    secondmin = Math.min(secondmin, b[i])
+                }
+            }
+            console.log(secondmin)
+        }
+        minnumber()
+
+
+
+
+
+
+
+
+    </script>
+
+    <!-----------------question-9---------------->
+    <!-- Write a function to check if a number is prime -->
+    <script>
+        function isPrime(n) {
+            if (n <= 1) {
+                return false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log(isPrime(49));
+    </script>
+
+    <!--------------------question-10-------------->
+    <!---Write a function that returns the reverse of a number--->
+    <script>
+        function reverseAnumber() {
+            let num1 = 5132968279;
+            let result = num1.toString().split('').reverse().join('');
+            console.log(result)
+        }
+        reverseAnumber()
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
